@@ -16,13 +16,6 @@ async def cmd_start(message: Message):
         await message.answer("С возвращением! Используй меню для игры.", reply_markup=main_menu_keyboard())
     else:
         await message.answer("Привет! Я бот-симулятор футбольной карьеры. Создай своего игрока с помощью команды /create.")
-        # handlers/start.py
-from aiogram import Router, F
-from aiogram.filters import Command
-from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from config import GITHUB_URL
-
-# ... (существующие обработчики) ...
 
 @router.message(Command("github"))
 async def cmd_github(message: Message):
